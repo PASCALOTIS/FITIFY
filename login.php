@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows == 1) {
         // User found, redirect to the menu page
-        header("Location: menu.php");
+        header("Location: menu.html");
         exit();
     } else {
         // User not found, display message and option to register
