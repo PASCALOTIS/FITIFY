@@ -124,7 +124,7 @@
       </div>
     </div>
     
-    <a href="nutrition.php">Back to Nutrition</a>
+    <a href="nutrition.html">Back to Nutrition</a>
   </div>
 
   <script>
