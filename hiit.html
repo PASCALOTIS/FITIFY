@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitness Tracker - HIIT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eaf6fd;
+    }
+
+    .header {
+      background-color: #26bfda;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .module {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .module .image {
+      flex: 0 0 150px;
+    }
+
+    .module .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-left: -5px;
+      border-radius: 36px;
+      margin-top: 17px;
+    }
+
+    .module h2 {
+      margin-top: 0;
+    }
+
+    .module p {
+      margin-bottom: 10px;
+    }
+
+    .module .duration {
+      font-weight: bold;
+    }
+
+    .module .tools {
+      margin-bottom: 10px;
+    }
+
+    .module .calories {
+      font-weight: bold;
+    }
+
+    .module .select-link {
+      color: #26bfda;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .module .select-link:hover {
+      text-decoration: underline;
+    }
+
+    .music-player {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .music-player button {
+      background-color: #26bfda;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .music-player button:hover {
+      background-color: #1e93ab;
+    }
+
+    .center-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .center-button button {
+      background-color: #26bfda;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .center-button button:hover {
+      background-color: #1e93ab;
+    }
+
+    .footer {
+      background-color: #35d03a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function playMusic() {
+      var audio = new Audio('motivation.mp3');
+      audio.play();
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Fitness Tracker - HIIT</h1>
+  </div>
+
+  <div class="container">
+    <div class="module">
+      <div class="image">
+        <img src="high.jpg" alt="High Knees">
+      </div>
+      <div>
+        <h2>Module 1: High Knees</h2>
+        <p class="duration">Duration: 1 minute</p>
+        <p class="tools">Fitness Tools: None</p>
+        <p class="calories">Calories Burnt: 100</p>
+        <a class="select-link" href="stats.html?module=Module%201&duration=1&calories=100">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="burpees.jpg" alt="Burpees">
+      </div>
+      <div>
+        <h2>Module 2: Burpees</h2>
+        <p class="duration">Duration: 30 seconds</p>
+        <p class="tools">Fitness Tools: None</p>
+        <p class="calories">Calories Burnt: 80</p>
+        <a class="select-link" href="stats.html?module=Module%202&duration=0.5&calories=80">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="mountain.jpg" alt="Mountain Climbers">
+      </div>
+      <div>
+        <h2>Module 3: Mountain Climbers</h2>
+        <p class="duration">Duration: 45 seconds</p>
+        <p class="tools">Fitness Tools: None</p>
+        <p class="calories">Calories Burnt: 90</p>
+        <a class="select-link" href="stats.html?module=Module%203&duration=0.75&calories=90">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="jump.jpg" alt="Jumping Jacks">
+      </div>
+      <div>
+        <h2>Module 4: Jumping Jacks</h2>
+        <p class="duration">Duration: 1 minute</p>
+        <p class="tools">Fitness Tools: None</p>
+        <p class="calories">Calories Burnt: 100</p>
+        <a class="select-link" href="stats.html?module=Module%204&duration=1&calories=100">Select</a>
+      </div>
+    </div>
+
+    <div class="music-player">
+      <button onclick="playMusic()">Play Music</button>
+    </div>
+    
+    <div class="center-button">
+      <button>
+        <a href="workouts.php" style="color: white; text-decoration: none;">Back to Workout Page</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2023 Fitness Tracker. All rights reserved.
+  </div>
+</body>
+</html>

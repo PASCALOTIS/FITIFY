@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitness Tracker - Strength</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eaf6fd;
+    }
+
+    .header {
+      background-color: #26bfda;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .workout-plan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .module {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .module .image {
+      flex: 0 0 150px;
+    }
+
+    .module .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-left: -5px;
+      border-radius: 36px;
+      margin-top: 17px;
+    }
+
+    .module .details {
+      flex-grow: 1;
+    }
+
+    .module h2 {
+      margin-top: 0;
+    }
+
+    .module p {
+      margin-bottom: 10px;
+    }
+
+    .module .duration {
+      font-weight: bold;
+    }
+
+    .module .tools {
+      margin-bottom: 10px;
+    }
+
+    .module .calories {
+      font-weight: bold;
+    }
+
+    .module .select-link {
+      color: #26bfda;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .module .select-link:hover {
+      text-decoration: underline;
+    }
+
+    .music-player {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .music-player button {
+      background-color: #26bfda;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .music-player button:hover {
+      background-color: #1e93ab;
+    }
+
+    .footer {
+      background-color: #35d03a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .center-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .center-button button {
+      background-color: #1e426e;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .center-button button:hover {
+      background-color: #122a3e;
+    }
+  </style>
+  <script>
+    function playMusic() {
+      var audio = new Audio('motivation.mp3');
+      audio.play();
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Fitness Tracker - Strength</h1>
+  </div>
+
+  <div class="container">
+    <div class="module">
+      <div class="image">
+        <img src="upper.jpg" alt="Upper Body Workout">
+      </div>
+      <div class="details">
+        <h2>Module 1: Upper Body Workout</h2>
+        <p class="duration">Duration: 30 minutes</p>
+        <p class="tools">Fitness Tools: Dumbbells, Resistance Bands</p>
+        <p class="calories">Calories Burnt: 250</p>
+        <a class="select-link" href="stats.html?module=Module%201&duration=30&calories=250">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="lower.jpg" alt="Lower Body Workout">
+      </div>
+      <div class="details">
+        <h2>Module 2: Lower Body Workout</h2>
+        <p class="duration">Duration: 45 minutes</p>
+        <p class="tools">Fitness Tools: Barbell, Kettlebell</p>
+        <p class="calories">Calories Burnt: 350</p>
+        <a class="select-link" href="stats.html?module=Module%202&duration=45&calories=350">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="core.jpg" alt="Core Workout">
+      </div>
+      <div class="details">
+        <h2>Module 3: Core Workout</h2>
+        <p class="duration">Duration: 20 minutes</p>
+        <p class="tools">Fitness Tools: Swiss Ball, Medicine Ball</p>
+        <p class="calories">Calories Burnt: 150</p>
+        <a class="select-link" href="stats.html?module=Module%203&duration=20&calories=150">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="full.jpg" alt="Full Body Workout">
+      </div>
+      <div class="details">
+        <h2>Module 4: Full Body Workout</h2>
+        <p class="duration">Duration: 60 minutes</p>
+        <p class="tools">Fitness Tools: TRX Suspension Trainer, Jump Rope</p>
+        <p class="calories">Calories Burnt: 500</p>
+        <a class="select-link" href="stats.html?module=Module%204&duration=60&calories=500">Select</a>
+      </div>
+    </div>
+
+    <div class="music-player">
+      <button onclick="playMusic()">Play Music</button>
+    </div>
+
+    <div class="center-button">
+      <a href="workouts.php"><button>Back to Workout Page</button></a>
+    </div>
+  </div>
+
+  <div class="footer">
+     <a href="workouts.php">Back to Workout Page</a>
+    &copy; 2023 Fitness Tracker. All rights reserved.
+  </div>
+</body>
+</html>
+

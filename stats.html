@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Stats Page</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 to-purple-500">
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white mb-6">Stats Page</h1>
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-1/2 px-4">
+        <h2 class="text-xl text-white mb-4">Training History</h2>
+        <div class="bg-white rounded-lg p-4">
+          <canvas id="training-history-chart"></canvas>
+        </div>
+      </div>
+      <div class="w-1/2 px-4">
+        <h2 class="text-xl text-white mb-4">Nutrition</h2>
+        <div class="bg-white rounded-lg p-4">
+          <canvas id="nutrition-chart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-4 mt-6">
+      <div class="w-1/2 px-4">
+        <h2 class="text-xl text-white mb-4">Targets</h2>
+        <div class="bg-white rounded-lg p-4">
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700" for="target-input">Set a target</label>
+            <input id="target-input" type="text" placeholder="Enter your target"
+              class="border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:border-indigo-500">
+          </div>
+          <button
+            class="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer class="mt-6 text-white text-center">
+      <p class="text-sm">&copy; 2023 Your Fitness Tracker. All rights reserved.</p>
+      <a href="menu.php" class="text-indigo-200 hover:text-indigo-100">Back to Menu</a>
+    </footer>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<script>
+  // Placeholder data (replace with actual data from the fitness tracker database)
+  const trainingHistoryData = {
+    labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"],
+    weight: [150, 155, 160, 165, 170],
+    reps: [10, 12, 14, 16, 18]
+  };
+
+  const nutritionData = {
+    labels: ["Calories", "Fat", "Carbs", "Protein"],
+    goal: [2000, 80, 300, 100],
+    actual: [1800, 70, 250, 90]
+  };
+
+  var trainingHistoryChart = new Chart(document.getElementById("training-history-chart"), {
+    type: "line",
+    data: {
+      labels: trainingHistoryData.labels,
+      datasets: [{
+        label: "Weight",
+        data: trainingHistoryData.weight,
+        fill: false,
+        lineTension: 0.3
+      }, {
+        label: "Reps",
+        data: trainingHistoryData.reps,
+        fill: false,
+        lineTension: 0.3
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          ticks: {
+            beginAtZero: true,
+            color: "rgba(255, 255, 255, 0.8)",
+          },
+          grid: {
+            color: "rgba(255, 255, 255, 0.1)",
+          },
+        },
+        x: {
+          ticks: {
+            color: "rgba(255, 255, 255, 0.8)",
+          },
+          grid: {
+            color: "rgba(255, 255, 255, 0.1)",
+          },
+        },
+      },
+    }
+  });
+
+  var nutritionChart = new Chart(document.getElementById("nutrition-chart"), {
+    type: "bar",
+    data: {
+      labels: nutritionData.labels,
+      datasets: [{
+        label: "Goal",
+        data: nutritionData.goal,
+        fill: false,
+        backgroundColor: "rgba(255, 255, 255, 0.8)",
+        borderColor: "rgba(255, 255, 255, 0.8)",
+      }, {
+        label: "Actual",
+        data: nutritionData.actual,
+        fill: false,
+        backgroundColor: "rgba(173, 216, 230, 0.8)",
+        borderColor: "rgba(173, 216, 230, 0.8)",
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          ticks: {
+            beginAtZero: true,
+            color: "rgba(255, 255, 255, 0.8)",
+          },
+          grid: {
+            color: "rgba(255, 255, 255, 0.1)",
+          },
+        },
+        x: {
+          ticks: {
+            beginAtZero: true,
+            color: "rgba(255, 255, 255, 0.8)",
+          },
+          grid: {
+            color: "rgba(255, 255, 255, 0.1)",
+          },
+        },
+      },
+    }
+  });
+</script>
+
+</html>

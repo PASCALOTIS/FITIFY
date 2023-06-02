@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitness Tracker - Warm-up and Recovery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eaf6fd;
+    }
+
+    .header {
+      background-color: #26bfda;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .module {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .module h2 {
+      margin-top: 0;
+    }
+
+    .module p {
+      margin-bottom: 10px;
+    }
+
+    .module .duration {
+      font-weight: bold;
+    }
+
+    .module .tools {
+      margin-bottom: 10px;
+    }
+
+    .module .calories {
+      font-weight: bold;
+    }
+
+    .module .image {
+      flex: 0 0 150px;
+    }
+    .module .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-left: -5px;
+      border-radius: 36px;
+      margin-top: 17px;
+    }
+
+    .module .image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .module .details {
+      flex-grow: 1;
+    }
+
+    .module .select-link {
+      color: #26bfda;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .module .select-link:hover {
+      text-decoration: underline;
+    }
+
+    .music-player {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .music-player button {
+      background-color: #26bfda;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .music-player button:hover {
+      background-color: #1e93ab;
+    }
+
+    .footer {
+      background-color: #35d03a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .center-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .center-button button {
+      background-color: #1e426e;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .center-button button:hover {
+      background-color: #1c3b5f;
+    }
+  </style>
+  <script>
+    function playMusic() {
+      var audio = new Audio('motivation.mp3');
+      audio.play();
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Fitness Tracker - Warm-up and Recovery</h1>
+  </div>
+
+  <div class="container">
+    <div class="module">
+      <div class="image">
+        <img src="dynamic.jpg" alt="Dynamic Stretching">
+      </div>
+      <div class="details">
+        <h2>Module 1: Dynamic Stretching</h2>
+        <p class="duration">Duration: 10 minutes</p>
+        <p class="tools">Fitness Tools: None</p>
+        <p class="calories">Calories Burnt: 50</p>
+        <a class="select-link" href="stats.html?module=Module%201&duration=10&calories=50">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="foam.jpg" alt="Foam Rolling">
+      </div>
+      <div class="details">
+        <h2>Module 2: Foam Rolling</h2>
+        <p class="duration">Duration: 15 minutes</p>
+        <p class="tools">Fitness Tools: Foam Roller</p>
+        <p class="calories">Calories Burnt: 70</p>
+        <a class="select-link" href="stats.html?module=Module%202&duration=15&calories=70">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="static.jpg" alt="Static Stretching">
+      </div>
+      <div class="details">
+        <h2>Module 3: Static Stretching</h2>
+        <p class="duration">Duration: 10 minutes</p>
+        <p class="tools">Fitness Tools: None</p>
+        <p class="calories">Calories Burnt: 40</p>
+        <a class="select-link" href="stats.html?module=Module%203&duration=10&calories=40">Select</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="image">
+        <img src="mind.jpg" alt="Mindfulness Meditation">
+      </div>
+      <div class="details">
+        <h2>Module 4: Mindfulness Meditation</h2>
+        <p class="duration">Duration: 5 minutes</p>
+        <p class="tools">Fitness Tools: None</p>
+        <p class="calories">Calories Burnt: 20</p>
+        <a class="select-link" href="stats.html?module=Module%204&duration=5&calories=20">Select</a>
+      </div>
+    </div>
+
+    <div class="music-player">
+      <button onclick="playMusic()">Play Music</button>
+    </div>
+    
+    <div class="center-button">
+      <a href="workouts.php"><button style="background-color: #1e426e; color: #fff;">Back to Workout Page</button></a>
+    </div>
+  </div>
+  
+  <div class="footer">
+    &copy; 2023 Fitness Tracker. All rights reserved.
+  </div>
+</body>
+</html>
